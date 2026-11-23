@@ -1,0 +1,1151 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080808" />
+    <meta
+      name="description"
+      content="Central de suporte Wiser Imports: manuais, orientações, garantia e atendimento."
+    />
+    <title>Wiser Imports | Sua ferramenta, nosso suporte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --black: #080808;
+        --ink: #20201c;
+        --peach: #ffce9e;
+        --lemon: #ffffcf;
+        --gold: #c99526;
+        --orange: #f58238;
+        --muted: #5d584d;
+        --max: 1440px;
+        --shadow: 0 16px 50px #20140718;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+      }
+      body {
+        margin: 0;
+        background: var(--lemon);
+        color: var(--ink);
+        font:
+          400 16px/1.55 Lato,
+          Arial,
+          sans-serif;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: Inter, Arial, sans-serif;
+        line-height: 1.18;
+        margin: 0 0 20px;
+      }
+      p {
+        margin: 0 0 20px;
+      }
+      a {
+        color: inherit;
+      }
+      button {
+        font: inherit;
+        cursor: pointer;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+      :focus-visible {
+        outline: 3px solid #0056ba;
+        outline-offset: 4px;
+      }
+      .container {
+        width: min(var(--max), calc(100% - 72px));
+        margin: auto;
+      }
+      .section {
+        padding: 100px 0;
+      }
+      .header {
+        background: linear-gradient(#000, #090909);
+        color: white;
+        min-height: 92px;
+        position: relative;
+        z-index: 5;
+        box-shadow: 0 10px 22px #0003;
+      }
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        min-height: 92px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        font:
+          800 18px Inter,
+          Arial,
+          sans-serif;
+        letter-spacing: 0.06em;
+      }
+      .brand-mark {
+        width: 55px;
+        height: 55px;
+        border: 2px solid var(--gold);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: radial-gradient(circle at 50% 30%, #3b3326, #080808 65%);
+        color: #ffd576;
+        font: 800 25px Inter;
+      }
+      .brand small {
+        display: block;
+        font: 600 10px Lato;
+        letter-spacing: 0.4em;
+        color: #d7ad53;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+      }
+      .nav a {
+        font-size: 14px;
+        text-decoration: none;
+        color: #f9f1e4;
+      }
+      .nav a:hover {
+        color: #ffc873;
+      }
+      .online {
+        border: 1px solid #c0ff91;
+        background: linear-gradient(#d8ffb6, #70b83c);
+        color: #16370d;
+        padding: 7px 18px;
+        border-radius: 999px;
+        font: 800 13px Inter;
+        letter-spacing: 0.08em;
+        box-shadow: 0 0 13px #c0ff88a8;
+      }
+      .online:after {
+        content: "";
+        display: inline-block;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #00a329;
+        margin-left: 9px;
+        box-shadow: 0 0 0 3px #ffffff66;
+      }
+      .hero {
+        background: var(--peach);
+        padding: 100px 0 110px;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 9%;
+      }
+      .hero-copy {
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: clamp(34px, 3.6vw, 68px);
+        letter-spacing: 0.14em;
+        font-weight: 800;
+        text-transform: uppercase;
+        line-height: 1.35;
+        text-shadow: 2px 3px 3px #0003;
+      }
+      .hero-copy p {
+        font-size: clamp(16px, 1.25vw, 23px);
+        line-height: 1.5;
+        max-width: 680px;
+        margin: 40px auto 0;
+      }
+      .hero-visual {
+        text-align: center;
+      }
+      .hero-visual h2 {
+        font-size: clamp(17px, 1.6vw, 26px);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        line-height: 1.9;
+        margin: 25px auto 0;
+        max-width: 680px;
+      }
+      .logo-card {
+        min-height: 360px;
+        border-radius: 54px;
+        border: 5px solid #c28a1d;
+        box-shadow:
+          0 8px 25px #0005,
+          inset 0 0 0 2px #ffdf7a;
+        background: radial-gradient(
+          ellipse at 50% 30%,
+          #2d2b29 0%,
+          #070707 70%
+        );
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+      }
+      .logo-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .logo-fallback {
+        color: #e7bc59;
+        font: 800 clamp(38px, 5vw, 82px) Inter;
+        text-shadow:
+          1px 2px #fff8,
+          3px 6px #000;
+        letter-spacing: -0.06em;
+      }
+      .logo-fallback small {
+        display: block;
+        color: #e8bd50;
+        letter-spacing: 0.4em;
+        font: 600 22px Inter;
+      }
+      .about {
+        padding: 75px 0 55px;
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12%;
+        align-items: center;
+      }
+      .about-image {
+        min-height: 300px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+      }
+      .about-image img {
+        max-height: 330px;
+        object-fit: contain;
+      }
+      .image-missing {
+        min-height: 230px;
+        display: grid;
+        place-items: center;
+        border: 2px dashed #c7ad76;
+        border-radius: 24px;
+        background: #fff8e2;
+        color: #7c6337;
+        text-align: center;
+        padding: 30px;
+      }
+      .about h2,
+      .support h2,
+      .products h2 {
+        font-size: clamp(26px, 2.4vw, 42px);
+      }
+      .about p {
+        font-size: 18px;
+        max-width: 590px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 48px;
+        padding: 12px 24px;
+        border: 0;
+        border-radius: 999px;
+        background: #1a1917;
+        color: #fff;
+        text-decoration: none;
+        font: 700 14px Lato;
+        transition:
+          transform 0.2s,
+          filter 0.2s;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.12);
+      }
+      .btn-orange {
+        background: var(--orange);
+        color: white;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        border-bottom: 3px solid #9d481d;
+      }
+      .support {
+        padding: 55px 0 80px;
+      }
+      .support-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+        gap: 70px;
+      }
+      .support h2 {
+        text-align: center;
+        margin-bottom: 46px;
+      }
+      .support-items {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+      .support-item {
+        text-align: center;
+        padding: 16px 12px;
+      }
+      .support-item h3 {
+        font: 800 17px Inter;
+        margin: 0 0 9px;
+      }
+      .support-item p {
+        font-size: 15px;
+        letter-spacing: 0.04em;
+        line-height: 1.55;
+        margin-bottom: 8px;
+      }
+      .support-item a {
+        font-weight: 700;
+        text-underline-offset: 4px;
+      }
+      .support-visual {
+        min-height: 430px;
+        position: relative;
+        display: grid;
+        place-items: center;
+      }
+      .support-visual img {
+        position: relative;
+        z-index: 2;
+        max-height: 500px;
+      }
+      .decor {
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(3, 36px);
+        gap: 11px;
+        transform: rotate(45deg);
+        opacity: 0.95;
+      }
+      .decor span {
+        height: 36px;
+        border-radius: 7px;
+        background: #c99627;
+      }
+      .decor.left {
+        left: 5%;
+        bottom: 15%;
+      }
+      .decor.left span {
+        background: #0751c8;
+      }
+      .decor.right {
+        right: 10%;
+        top: 10%;
+      }
+      .products {
+        padding: 50px 0 125px;
+      }
+      .product-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10%;
+        align-items: center;
+        margin-bottom: 100px;
+      }
+      .product-row:last-child {
+        margin-bottom: 0;
+      }
+      .product-row.reverse .product-art {
+        order: 2;
+      }
+      .product-art {
+        display: flex;
+        justify-content: center;
+      }
+      .product-art img {
+        width: min(100%, 470px);
+        aspect-ratio: 1;
+        object-fit: contain;
+        background: white;
+        border: 3px solid #c99024;
+        border-radius: 32px;
+      }
+      .product-art .image-missing {
+        width: min(100%, 470px);
+        aspect-ratio: 1;
+      }
+      .product-copy {
+        max-width: 630px;
+      }
+      .product-copy h2 {
+        margin-bottom: 20px;
+      }
+      .product-copy p {
+        font-size: 18px;
+      }
+      .manuals {
+        padding: 60px 0 120px;
+      }
+      .manuals h2 {
+        text-align: center;
+        font-size: clamp(36px, 4vw, 64px);
+        margin-bottom: 95px;
+        letter-spacing: -0.04em;
+        color: #080808;
+      }
+      .manual-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 44px;
+      }
+      .manual-card {
+        background: linear-gradient(135deg, #ffe3a8, #ffe3b7 55%, #f9dbac);
+        border-radius: 23px;
+        box-shadow: 0 4px 0 #17140e;
+        padding: 44px 28px 28px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 34px;
+        min-height: 260px;
+      }
+      .manual-card h3 {
+        font-size: clamp(18px, 1.5vw, 25px);
+        letter-spacing: 0.08em;
+        text-shadow: 2px 3px 3px #0004;
+      }
+      .manual-card .btn {
+        width: 100%;
+        max-width: 360px;
+        font-size: 17px;
+      }
+      .manual-card .btn[aria-disabled="true"] {
+        opacity: 0.72;
+        cursor: not-allowed;
+      }
+      .faq {
+        background: var(--peach);
+        padding: 90px 0 110px;
+      }
+      .faq-heading {
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto 75px;
+      }
+      .faq-heading h2 {
+        font-size: clamp(22px, 2.2vw, 36px);
+      }
+      .faq-heading p {
+        font-size: 17px;
+      }
+      .faq-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10%;
+      }
+      .faq-item {
+        border-bottom: 1px solid #b48c5b;
+        padding: 14px 0;
+      }
+      .faq-num {
+        color: #2759cb;
+        font: 600 15px Inter;
+        display: block;
+        margin-bottom: 5px;
+      }
+      .faq-item summary {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 700;
+        font-size: 17px;
+        cursor: pointer;
+      }
+      .faq-item summary::-webkit-details-marker {
+        display: none;
+      }
+      .faq-item summary:before {
+        content: "+";
+        flex: none;
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        background: #c18e24;
+        border: 1px solid #7e5911;
+        display: grid;
+        place-items: center;
+        font-size: 19px;
+        line-height: 1;
+      }
+      .faq-item[open] summary:before {
+        content: "−";
+      }
+      .faq-answer {
+        padding: 15px 0 8px 35px;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      .faq-answer a {
+        font-weight: 700;
+      }
+      .footer {
+        background: #090909;
+        color: #eee;
+        font-size: 12px;
+        letter-spacing: 0.09em;
+      }
+      .footer-inner {
+        min-height: 58px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+      }
+      .footer a {
+        color: #e7c782;
+        text-decoration: none;
+      }
+      .whatsapp {
+        position: fixed;
+        z-index: 30;
+        right: 24px;
+        bottom: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        width: 104px;
+        height: 104px;
+        border-radius: 22px;
+        background: #19ce3a;
+        color: white;
+        text-decoration: none;
+        box-shadow: 0 9px 30px #0004;
+        transition: transform 0.2s;
+      }
+      .whatsapp:hover {
+        transform: translateY(-4px);
+      }
+      .whatsapp svg {
+        width: 60px;
+        height: 60px;
+      }
+      .whatsapp small {
+        font: 800 8px Inter;
+        white-space: nowrap;
+      }
+      .whatsapp[aria-disabled="true"] {
+        opacity: 0.8;
+      }
+      .notice {
+        background: #fff3d4;
+        color: #493b1e;
+        padding: 12px 20px;
+        text-align: center;
+        font-size: 14px;
+      }
+      @media (max-width: 1050px) {
+        .nav {
+          gap: 13px;
+        }
+        .nav a {
+          font-size: 12px;
+        }
+        .container {
+          width: min(var(--max), calc(100% - 44px));
+        }
+        .hero-grid {
+          gap: 5%;
+        }
+        .support-grid {
+          gap: 25px;
+        }
+        .manual-grid {
+          gap: 20px;
+        }
+        .manual-card {
+          padding: 30px 15px;
+        }
+        .product-row {
+          gap: 6%;
+        }
+      }
+      @media (max-width: 760px) {
+        .header-inner {
+          min-height: 74px;
+        }
+        .header {
+          min-height: 74px;
+        }
+        .brand {
+          font-size: 13px;
+        }
+        .brand-mark {
+          width: 45px;
+          height: 45px;
+          font-size: 21px;
+        }
+        .nav {
+          display: none;
+        }
+        .online {
+          font-size: 11px;
+          padding: 7px 10px;
+        }
+        .hero {
+          padding: 65px 0;
+        }
+        .hero-grid,
+        .about-grid,
+        .support-grid,
+        .product-row,
+        .faq-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-grid {
+          gap: 48px;
+        }
+        .hero h1 {
+          font-size: clamp(30px, 7vw, 48px);
+        }
+        .hero-copy p {
+          margin-top: 22px;
+        }
+        .logo-card {
+          min-height: 230px;
+          border-radius: 30px;
+        }
+        .hero-visual h2 {
+          font-size: 16px;
+        }
+        .about {
+          padding: 55px 0;
+        }
+        .about-grid {
+          gap: 20px;
+        }
+        .about-image {
+          min-height: 180px;
+        }
+        .about-image img {
+          max-height: 240px;
+        }
+        .about-copy {
+          text-align: center;
+        }
+        .support {
+          padding: 30px 0 55px;
+        }
+        .support-grid {
+          gap: 30px;
+        }
+        .support-items {
+          gap: 8px;
+        }
+        .support-item {
+          padding: 10px 3px;
+        }
+        .support-item h3 {
+          font-size: 13px;
+        }
+        .support-item p {
+          font-size: 12px;
+        }
+        .support-visual {
+          min-height: 260px;
+        }
+        .support-visual img {
+          max-height: 310px;
+        }
+        .decor {
+          grid-template-columns: repeat(3, 24px);
+          gap: 8px;
+        }
+        .decor span {
+          height: 24px;
+        }
+        .products {
+          padding: 30px 0 70px;
+        }
+        .product-row {
+          gap: 24px;
+          margin-bottom: 75px;
+        }
+        .product-row.reverse .product-art {
+          order: 0;
+        }
+        .product-copy {
+          text-align: center;
+          margin: auto;
+        }
+        .product-copy p {
+          font-size: 16px;
+        }
+        .product-art img {
+          max-width: 400px;
+        }
+        .manuals {
+          padding: 40px 0 75px;
+        }
+        .manuals h2 {
+          margin-bottom: 35px;
+        }
+        .manual-grid {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+        .manual-card {
+          min-height: 190px;
+          gap: 22px;
+        }
+        .faq {
+          padding: 65px 0 90px;
+        }
+        .faq-heading {
+          margin-bottom: 40px;
+        }
+        .faq-grid {
+          gap: 0;
+        }
+        .footer-inner {
+          flex-direction: column;
+          justify-content: center;
+          padding: 18px 0;
+          text-align: center;
+          gap: 8px;
+        }
+        .whatsapp {
+          width: 76px;
+          height: 76px;
+          right: 14px;
+          bottom: 14px;
+          border-radius: 18px;
+        }
+        .whatsapp svg {
+          width: 44px;
+          height: 44px;
+        }
+        .whatsapp small {
+          font-size: 6px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *,
+        *:before,
+        *:after {
+          transition: none !important;
+          animation: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+  CONFIGURAÇÃO: preencha os campos vazios do objeto CONFIG no final do documento.
+  As imagens são URLs externas até que os assets originais do Figma sejam fornecidos.
+  Este arquivo funciona sem build, sem React e sem bibliotecas JS.
+-->
+    <header class="header" id="inicio">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio"
+          ><span class="brand-mark">WI</span
+          ><span>WISER <small>IMPORTS</small></span></a
+        >
+        <nav class="nav" aria-label="Navegação principal">
+          <a href="#sobre">Sobre</a><a href="#suporte">Suporte</a
+          ><a href="#produtos">Produtos</a><a href="#manuais">Manuais</a
+          ><a href="#faq">FAQ</a>
+        </nav>
+        <span class="online">ONLINE</span>
+      </div>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="titulo-principal">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1 id="titulo-principal">SUA FERRAMENTA<br />NOSSO SUPORTE</h1>
+            <p>
+              Na Wiser Imports, nosso compromisso vai além da entrega. Criamos
+              esta central para ajudar você a utilizar seus produtos com
+              segurança, encontrar manuais, esclarecer dúvidas e acessar
+              orientações sempre que precisar.
+            </p>
+          </div>
+          <div class="hero-visual">
+            <div class="logo-card" id="hero-logo">
+              <div class="logo-fallback">WISER<small>IMPORTS</small></div>
+            </div>
+            <h2>TUDO PARA CUIDAR MELHOR DAS SUAS FERRAMENTAS EM UM SÓ LUGAR</h2>
+          </div>
+        </div>
+      </section>
+      <section class="about" id="sobre">
+        <div class="container about-grid">
+          <div class="about-image" id="mascot">
+            <div class="image-missing">
+              Imagem do atendente Wiser<br />aguardando exportação do Figma
+            </div>
+          </div>
+          <div class="about-copy">
+            <h2>Bem-vindo à Wiser Imports</h2>
+            <p>
+              Estamos aqui para ajudar você! Conte com nossa equipe para
+              esclarecer dúvidas, receber orientações e solucionar questões
+              relacionadas à sua compra.
+            </p>
+            <a class="btn" data-link="about" href="#suporte">Saiba mais</a>
+          </div>
+        </div>
+      </section>
+      <section class="support" id="suporte">
+        <div class="container support-grid">
+          <div>
+            <h2>Como podemos ajudar você?</h2>
+            <div class="support-items">
+              <article class="support-item">
+                <h3>Garantia</h3>
+                <p>Informações e solicitações de garantia.</p>
+                <a href="#faq" data-link="warranty">Saiba mais</a>
+              </article>
+              <article class="support-item">
+                <h3>Suporte Técnico</h3>
+                <p>Orientações sobre o funcionamento dos produtos.</p>
+                <a href="#faq" data-link="technical">Saiba mais</a>
+              </article>
+              <article class="support-item">
+                <h3>Manuais e Montagem</h3>
+                <p>Instruções de uso, montagem e manutenção.</p>
+                <a href="#manuais">Saiba mais</a>
+              </article>
+            </div>
+          </div>
+          <div class="support-visual" id="phone-art">
+            <div class="decor left" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="decor right" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="image-missing">
+              Imagem do smartphone com WhatsApp<br />aguardando exportação do
+              Figma
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="products" id="produtos">
+        <div class="container">
+          <div class="product-row">
+            <div class="product-art" id="chainsaw-image">
+              <div class="image-missing">
+                Imagem da motosserra Nakasaki<br />aguardando exportação
+              </div>
+            </div>
+            <div class="product-copy">
+              <h2>Motosserra a Gasolina</h2>
+              <p>
+                A Motosserra Nakasaki é uma ferramenta importada de baixo custo,
+                muito popular entre proprietários de sítios e chácaras para
+                cortes ocasionais e podas. Embora utilize um nome de inspiração
+                japonesa, trata-se de um equipamento de fabricação chinesa
+                focado em entregar alta potência por um preço acessível.
+              </p>
+            </div>
+          </div>
+          <div class="product-row reverse">
+            <div class="product-art" id="brushcutter-image">
+              <div class="image-missing">
+                Imagem da roçadeira Nakasaki<br />aguardando exportação
+              </div>
+            </div>
+            <div class="product-copy">
+              <h2>Roçadeira a Gasolina Nakasaki</h2>
+              <p>
+                A Roçadeira Nakasaki é um equipamento importado focado em alto
+                custo-benefício e força bruta para uso doméstico pesado ou
+                semiprofissional, como na limpeza periódica de chácaras, sítios
+                e terrenos baldios.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="manuals" id="manuais" aria-labelledby="manuais-titulo">
+        <div class="container">
+          <h2 id="manuais-titulo">MANUAIS</h2>
+          <div class="manual-grid">
+            <article class="manual-card">
+              <h3>Roçadeira a Gasolina</h3>
+              <a
+                class="btn btn-orange"
+                data-link="manualBrushcutter"
+                href="#"
+                aria-disabled="true"
+                >BAIXAR MANUAL</a
+              >
+            </article>
+            <article class="manual-card">
+              <h3>Motosserra a Gasolina</h3>
+              <a
+                class="btn btn-orange"
+                data-link="manualChainsaw"
+                href="#"
+                aria-disabled="true"
+                >BAIXAR MANUAL</a
+              >
+            </article>
+            <article class="manual-card">
+              <h3>Motosserra extensora a bateria</h3>
+              <a
+                class="btn btn-orange"
+                data-link="manualPoleSaw"
+                href="#"
+                aria-disabled="true"
+                >BAIXAR MANUAL</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="faq" id="faq">
+        <div class="container">
+          <div class="faq-heading">
+            <h2>FAQ – Perguntas Frequentes | Wiser Imports</h2>
+            <p>
+              A seção de Perguntas Frequentes (FAQ) foi desenvolvida para
+              esclarecer as principais dúvidas dos nossos clientes de forma
+              rápida, prática e objetiva.
+            </p>
+          </div>
+          <div class="faq-grid">
+            <div>
+              <div class="faq-item">
+                <span class="faq-num">01</span>
+                <details>
+                  <summary>Como posso entrar em contato com o suporte?</summary>
+                  <div class="faq-answer">
+                    Use o botão de atendimento pelo WhatsApp disponível nesta
+                    página.
+                  </div>
+                </details>
+              </div>
+              <div class="faq-item">
+                <span class="faq-num">02</span>
+                <details>
+                  <summary>Qual é o prazo de garantia dos produtos?</summary>
+                  <div class="faq-answer">
+                    O prazo e as condições dependem do produto e da compra.
+                    Consulte o termo de garantia fornecido com seu equipamento
+                    ou entre em contato com o atendimento para confirmar.
+                  </div>
+                </details>
+              </div>
+              <div class="faq-item">
+                <span class="faq-num">03</span>
+                <details>
+                  <summary>
+                    Como solicitar assistência técnica ou garantia?
+                  </summary>
+                  <div class="faq-answer">
+                    Entre em contato com o suporte e informe o modelo do
+                    equipamento e os dados da compra. A equipe orientará os
+                    próximos passos.
+                  </div>
+                </details>
+              </div>
+            </div>
+            <div>
+              <div class="faq-item">
+                <span class="faq-num">04</span>
+                <details>
+                  <summary>Onde encontro o manual de instruções?</summary>
+                  <div class="faq-answer">
+                    Acesse a seção <a href="#manuais">Manuais</a> e selecione o
+                    modelo correspondente ao seu equipamento.
+                  </div>
+                </details>
+              </div>
+              <div class="faq-item">
+                <span class="faq-num">05</span>
+                <details>
+                  <summary>
+                    Meu equipamento apresentou um problema. O que fazer?
+                  </summary>
+                  <div class="faq-answer">
+                    Interrompa o uso se houver risco de acidente e consulte o
+                    manual. Se o problema persistir, procure nosso suporte
+                    técnico.
+                  </div>
+                </details>
+              </div>
+              <div class="faq-item">
+                <span class="faq-num">06</span>
+                <details>
+                  <summary>Como solicitar troca ou devolução?</summary>
+                  <div class="faq-answer">
+                    Entre em contato com o atendimento e informe os dados do
+                    pedido. A equipe verificará as condições aplicáveis à sua
+                    compra.
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span>WISER IMPORTS ® ∗ 2027</span
+        ><span>Criado por ◆ Produzido por Makavianson</span
+        ><a data-link="privacy" href="#" aria-disabled="true"
+          >TERMOS DE PRIVACIDADE</a
+        >
+      </div>
+    </footer>
+    <a
+      class="whatsapp"
+      id="whatsapp-button"
+      href="#"
+      aria-label="Fale com um atendente pelo WhatsApp"
+      aria-disabled="true"
+    >
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path
+          fill="white"
+          d="M16.02 2.5A13.4 13.4 0 0 0 4.5 22.8L2.6 29.5l6.9-1.8A13.5 13.5 0 1 0 16 2.5Zm0 24.5c-2.1 0-4.2-.6-5.9-1.7l-.4-.2-4.1 1.1 1.1-4-.3-.4A11 11 0 1 1 16 27Zm6.1-8.2c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.3-.7.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.5-.6c.2-.2.2-.4.4-.6.1-.2 0-.5 0-.7-.1-.2-.7-1.8-1-2.5-.3-.6-.5-.6-.7-.6h-.6c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.9 1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.2.8.3 1.5.5 2 .7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.5.2-1.6-.1-.1-.3-.2-.6-.4Z"
+        />
+      </svg>
+      <small>FALE COM UM ATENDENTE</small></a
+    >
+    <script>
+      /*
+       * CONFIGURAÇÕES DO SITE
+       * Preencha com links HTTPS confiáveis. Não há links inventados.
+       * As imagens podem ser URLs https ou data:image/...;base64,...
+       */
+      const CONFIG = Object.freeze({
+        links: {
+          whatsapp: "",
+          about: "#suporte",
+          warranty: "",
+          technical: "",
+          manualBrushcutter: "",
+          manualChainsaw: "",
+          manualPoleSaw: "",
+          privacy: "",
+        },
+        images: {
+          logo: "",
+          mascot: "",
+          phone: "",
+          chainsaw: "",
+          brushcutter: "",
+        },
+      });
+      function isSafeURL(url) {
+        if (!url || typeof url !== "string") return false;
+        if (url.startsWith("#")) return /^#[a-zA-Z][\w-]*$/.test(url);
+        try {
+          return new URL(url).protocol === "https:";
+        } catch {
+          return false;
+        }
+      }
+      for (const element of document.querySelectorAll("[data-link]")) {
+        const url = CONFIG.links[element.dataset.link];
+        if (isSafeURL(url)) {
+          element.href = url;
+          element.removeAttribute("aria-disabled");
+          if (url.startsWith("https://")) {
+            element.target = "_blank";
+            element.rel = "noopener noreferrer";
+          }
+        } else {
+          element.href = "#";
+          element.setAttribute("aria-disabled", "true");
+          element.addEventListener("click", (event) => event.preventDefault());
+          element.title = "Link ainda não configurado";
+        }
+      }
+      const whatsapp = document.getElementById("whatsapp-button");
+      if (
+        isSafeURL(CONFIG.links.whatsapp) &&
+        CONFIG.links.whatsapp.startsWith("https://")
+      ) {
+        whatsapp.href = CONFIG.links.whatsapp;
+        whatsapp.target = "_blank";
+        whatsapp.rel = "noopener noreferrer";
+        whatsapp.removeAttribute("aria-disabled");
+      } else {
+        whatsapp.addEventListener("click", (event) => event.preventDefault());
+        whatsapp.title = "WhatsApp ainda não configurado";
+      }
+      function setImage(id, source, alt) {
+        if (
+          !source ||
+          !(
+            source.startsWith("data:image/") ||
+            (isSafeURL(source) && source.startsWith("https://"))
+          )
+        )
+          return;
+        const parent = document.getElementById(id);
+        if (!parent) return;
+        const img = document.createElement("img");
+        img.src = source;
+        img.alt = alt;
+        img.loading = id === "hero-logo" ? "eager" : "lazy";
+        img.decoding = "async";
+        parent.replaceChildren(img);
+      }
+      setImage("hero-logo", CONFIG.images.logo, "Logo Wiser Imports");
+      setImage("mascot", CONFIG.images.mascot, "Atendente Wiser Imports");
+      setImage(
+        "phone-art",
+        CONFIG.images.phone,
+        "Atendimento Wiser Imports no WhatsApp",
+      );
+      setImage(
+        "chainsaw-image",
+        CONFIG.images.chainsaw,
+        "Motosserra a gasolina Nakasaki",
+      );
+      setImage(
+        "brushcutter-image",
+        CONFIG.images.brushcutter,
+        "Roçadeira a gasolina Nakasaki",
+      );
+    </script>
+  </body>
+</html>
